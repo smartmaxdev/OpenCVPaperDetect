@@ -167,7 +167,7 @@ static CGContextRef CreateCGBitmapContextForSize(CGSize size)
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _camera = -1;
-        _qualityPreset = AVCaptureSessionPresetMedium;
+        _qualityPreset = AVCaptureSessionPresetHigh;
         _captureGrayscale = YES;
         
         // Create frame time circular buffer for calculating averaged fps
