@@ -564,4 +564,16 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
         _fpsLabel.text = [NSString stringWithFormat:@"FPS: %0.1f", _fps];
     }
 }
+
+- (void)viewDidLayoutSubviews
+{
+    NSLog(@"viewDidLayoutSubviews");
+    [super viewDidLayoutSubviews];
+    [self updatePreviewLayer];
+}
+- (void)updatePreviewLayer
+{
+    _videoPreviewLayer.frame = CGRectMake(0, 0, self.view.bounds.size.width,  self.view.bounds.size.height);
+    
+}
 @end
